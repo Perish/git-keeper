@@ -17,7 +17,9 @@ class Main extends Component {
 					<AppBar
 					    title="Git Keeper"
 					  />
-		        { React.cloneElement(this.props.children, this.props) }
+		{
+			React.cloneElement(this.props.children, {...this.props})
+		}
 		        </div>
 		  	</MuiThemeProvider>
 		);

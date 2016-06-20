@@ -27,7 +27,6 @@ const paperStyle = {
 
 class Repos extends Component {
 	componentDidMount() {
-
 		let username = this.props.params.username;
 		let {
 			fetchRepos
@@ -38,10 +37,12 @@ class Repos extends Component {
 		console.log('renderrepos', repos)
 		if (repos !== undefined) {
 			return repos.map((rep) =>
-				<ListItem key={rep.id}
-				          primaryText={rep.name}
-				          secondaryText={rep.description}
-				        />
+				<a href={rep.html_url} target='_blank'  key={rep.id}>
+					<ListItem
+					          primaryText={rep.name}
+					          secondaryText={rep.description}
+					        />
+				</a>
 			);
 		} else {
 			return <ListItem

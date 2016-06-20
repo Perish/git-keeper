@@ -42,7 +42,6 @@ class SearchUser extends Component {
 			infos
 		} = this.props;
 		return (
-
 			<div style={{margin: 'auto', width: 480,  textAlign: 'center', }}>
 				<div style={{marginBottom: 30, marginTop: -10}}>
 		        	<TextField
